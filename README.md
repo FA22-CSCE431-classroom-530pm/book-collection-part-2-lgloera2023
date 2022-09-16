@@ -21,4 +21,27 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+Run Docker image by executing 
+1.
+docker run --rm -it --volume "${PWD}:/csce431" -e DATABASE_USER=test_app -e DATABASE_PASSWORD=test_password -p 3000:3000 dmartinez05/ruby_rails_postgresql:latest 
+
+2.
+cd csce431
+
+3.
+bundle install
+
+4.
+rails db:create
+
+5.
+rails db:migrate
+
+6.
+rails server --binding=0.0.0.0
+
+7.
+http://127.0.0.1:3000
+
+8.
+If error with files not there, run yarn install
